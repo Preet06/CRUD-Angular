@@ -1,0 +1,18 @@
+{
+  "profile": [
+    {
+      "name": "Preet Nandeshwar",
+      "mobile": "09763644272",
+      "address": "Flat no - 203,Shree Vitthal Homes-1,near Gokul park society ,Manish Nagar",
+      "gender": "",
+      "id": 2
+    },
+    {
+      "name": "Preet Nandeshwar",
+      "mobile": "09763644272",
+      "address": "Flat no - 203,Shree Vitthal Homes-1,near Gokul park society ,Manish Nagar",
+      "gender": "Male",
+      "id": 3
+    }
+  ]
+}

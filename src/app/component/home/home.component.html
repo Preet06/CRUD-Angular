@@ -1,0 +1,63 @@
+
+<div *ngIf = "show">
+
+  <h1 class="title">Employees Registeration</h1>
+
+  <form [formGroup]="RegisterForm" (ngSubmit)="AddUser()">
+    <div class="dataInput">
+       <div class="name" id="nameInputBox">
+          <label for="name">Name</label>
+            <div>
+              <input type="text" id="name" name="name" formControlName="name" size="50" placeholder="Your name..">
+            </div>
+          </div> 
+        <div class="address" id="addressInputBox">
+           <label for="fname">Address</label>
+              <div>
+                <input type="text" id="addressBox" name="address" formControlName="address" size="80" placeholder="Your address..">
+              </div>
+         </div>
+        <div class="mobile" id="mobileInputBox">
+             <label for="fname">Mobile No.</label>
+                <div>
+                  <input type="text" id="mobile" name="mobile" formControlName="mobile" size="60" placeholder="Your Mobile No..">
+                </div>
+           </div> 
+        <div class="gender" id="genderInputBox">
+              <label for="gender">Gender</label>
+                   <select id="gender" name="gender" formControlName="gender">
+                       <option value="Male">Male</option>
+                       <option value="Women">Women</option>
+                    </select>
+         </div> 
+         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </div> 
+  </form>
+</div> 
+
+
+<div class="display" *ngIf = "!show">
+
+  <table id="customers">
+    <tr>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Address</th>
+      <th>Gender</th>
+    </tr>
+    <tr *ngFor = "let item of employeesList" >
+      <td>{{item.name}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.mobile}}</td>
+      <td>{{item.gender}}</td>
+      <td>
+        <button type="button" (click)="EditEmployees(item.id)" class="btn btn-primary">Edit</button>
+        <button type="submit" (click)="DeleteEmployees(item.id)"class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+    
+  </table>
+
+</div>
+
+
